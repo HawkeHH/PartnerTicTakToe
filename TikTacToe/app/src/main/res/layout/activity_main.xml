@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
 
     <GridLayout
         android:id="@+id/tiktok_grid"
@@ -22,7 +22,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.8">
 
-        <Button style="@style/X_Obutton" />
+        <Button
+            style="@style/X_Obutton"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp" />
 
         <Button style="@style/X_Obutton" />
 
@@ -41,5 +44,49 @@
         <Button style="@style/X_Obutton" />
 
     </GridLayout>
+
+    <TextView
+        android:id="@+id/PlayerOne_textview"
+        android:layout_width="131dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="56dp"
+        android:text="Player 1 Score:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Cat_textview"
+        android:layout_width="131dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:text="Cats Score:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerTwo_textview" />
+
+    <TextView
+        android:id="@+id/PlayerTwo_textview"
+        android:layout_width="131dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:text="Player Two Scrore:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerOne_textview" />
+
+    <Button
+        android:id="@+id/Startgame_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiktok_grid" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
